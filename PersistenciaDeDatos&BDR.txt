@@ -1,0 +1,28 @@
+La perisistencia de datos se puede realizar de dos foormas: RAM(Volatil),
+Disco Duro(Archivos, BD).
+
+PERSISTENCIA DE DATOS MEDIANTE APIS <- Conjunto de recursos que dispone una 
+empresa o una organizacion para que un tercero pueda consumir la informacion
+que ellos nos exponen.  
+
+APIS <- Metodo de comunicacion que le permite a terceros comunicarse entre si
+para transferir informacion y realizar el CRUD pero se les conoce como
+metodos http
+
+Las apis funcionan con el estandar http, se utilizan los siguientes metodo:
+    1.Obtener informacion <- metodo get
+    2. Enviar informacion o guardal <- metodo post
+    3. Actualizar informacion <- metodo put y pach
+    3. borrar <- metodo delete
+
+Apis formatos:
+    1.json <- estandar para las apis
+    2.xml <- se utilizaba en anos anteriores
+
+DEPENDNCIAS 
+    <- okhttp : Permite conectar java con APIS
+    <- gson : Nos permite serializar objetos(Respuesta 
+              de la API se convierte en un objeto).
+
+
+
