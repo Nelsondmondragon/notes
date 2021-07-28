@@ -1,0 +1,80 @@
+Beneficios de los TESTS
+    1.Comprobar los requerimientos.
+    2.Documentacion/ejemplos.
+    3.Ayudar con el diseno(TDD).
+    4.Confianza al desarrollar.
+    5.Confianza para refactorizar(Evitando deuda tecnica).
+    6.Herramienta que te da valor.
+
+Tests Automatico vs manuales
+    +Automaticos.
+    +Rapidos.
+    +Fiables.
+    +Incrementales.
+    -Tiempo de desarrollo.
+    -No siempre viables.
+
+Tipos de Tests
+    1.Unitarios. (Parte concreta del codigo, sin tener encuenta el resto de la aplicacion: funciones, clases,etc)
+    2.Integracion. (Como se conectan diferentes componentes de nuestra aplicacion: Conexion a la BD, conexion a API externa).
+    3.Funcionales. Prueban funcionalidad de un sistema(Se incluyen varias clases)
+    4.Inicio a fin(end to end) (Prueba todo el recorrido de una accion: registro de un usuario).
+    5.Estres (Peticiones multiples)
+
+Expresiones Regulares: .matches("[a-zA-Z]+") <- Indica que el string contiene letras de la a-zA-Z varias veces
+
+Lanzar EXCEPCION con la función throw new RuntimeException("Error")
+
+Se debe hacer un funcion de test para cada comprobacion.
+
+Test de Mockito para simular un dato(Simular pagos, Simula
+r ciertos valores aleatorios). 
+
+Dice dice = Mockito.mock(Dice.class);
+
+Libreria Mokito para simular una libreria de pago.
+
+Los test tienen 3 partes:
+    1. Preparacion de los objetos.
+    2. Llamada al metodo que queremos probar, probando el metodo.
+    3. Comprobamos que el resultado sea el indicado. 
+
+TDD: Test driven development
+  Definicion y Beneficios
+  1.Desarrollo de nuestras clases es guiado por los test.
+  2.Comenzar escribiendo los test nos ayuda a pensar en el diseno.
+  3.Si escribir el test es dificil, quizas el diseno no es adecuado.
+  4.Al terminar ya tendremos los test, con todos sus beneficios. 
+
+El ciclo del TDD
+    Pasos a seguir
+    1.RED <- Escribir un test que falle.
+    2.GREEN <-Escribir el codigo que lo haga pasar.
+    3.REFACTOR  <- Mejorar el codigo. 
+
+Reglas del TDD
+    1.Solo escribiras codigo de test hasta que falle.
+    2.Solo escribiras codigo de produccion si es para pasar un test que falla.
+    3.No escribiras mas codigo de produccion del necesario para pasar el test. 
+
+Organizacion de una aplicacion:
+
+    1. Interfaz: Comunicion de la aplicacion con el exterior o de la presentacion.
+    2. Negocio: Se encarga de la logica de negocios, calculos necesarios de nuestra aplicacion.
+    3. Datos: Se encarga de guardar los datos por ejemplo en una BD.
+    
+    Nota: Cada capa conoce su capa inferior para comunicarse, pero no conocera los detalles de la implementacion.
+
+Requerimientos y test
+    1.Escribiremos los test a partir de los requerimientos.
+    2.Lo ideal es tener los requerimientos bien especificados.
+    3.A veces el programador debe acabar de concrtarlos.
+
+Test para diferentes escenarios.
+    1.Escenarios tuipicos(Happy path)
+    2.Escenarios exernos.
+    3.Escenarios incorrectos.
+    4.Escenarios no previstos... bug!
+
+
+Consultar diferentes librerias de testing 
