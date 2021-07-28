@@ -1,0 +1,277 @@
+Que es una aplicacion empresarial?
+ formada por tres componentes principales
+    1.Empresa.
+    2.Necesidades(Requerimientos Funcionales).
+    3.Aplicacion Empresarial.(Componentes articulados que permite solucionar
+    un problema especifico de una empresa)
+
+Importante recalcar que durante este proceso intervienen los procesos, las personas
+conformada por varias capas, varios leguajes, debe ser integra y modular.
+
+2 tipos de apps:
+    1. Orientadas a solucionar un problema en especifico, apps hechas a medidas. 
+    2. Apps que surgieron de la necesidad mostrar servicios a los usuarios.(Redes sociales).
+
+Apps Empresariales manejan conceptos de interoperabilidad.
+
+Librerias o framework de desarrollo<- Java EE, Spring
+
+Por Aprender.
+Patrones de diseno, librerias de optimizacion, formas de empaquetar y 
+configurar las aplicaciones, con el objetivo de esquematizar y optimizar
+el desarrollo.
+
+COMPONENTES DE UNA APLICACION WEB:
+ 1. Tema del cliente <- Representado por un browser.
+ 2. Servidor web<- LLegan las peteciones.
+ 3. Base de datos <- Donde persisten los datos. 
+
+Peculiaridad en java,aparecen dos conceptos:
+     1.Servidores web<- Contenedor web, componente que permite procesar todas las peteciones que son realizadas
+                        con tecnologias java (Servlet, Java Page Server,JS Faces), ejemplos tomcat, jetty server
+
+     2.servidores de aplicacion. Contenedor Web, Contenedor Negocio EJB(Maneja el tema de la capa de negocios,
+                                 soporta la transaccionalidad, manejo de persistencia y pull dinamicos), ejemplos
+                                 payara servis, glassfish server
+Que son los Servlest?
+Son componentes del lado del servidor(clase java)que permiten procesar peticiones del cliente y responderlas
+a traves de la generacion de contenido dinamico o redireccinarlas a otros recursos.
+
+Hay dos tipos de Servlet
+    1.GenericServlet(Otros protocolos)Las clases
+        relacionadas se encuentran en el paquete javax.servlet , Se procesan
+        peticiones con el metodo servis
+    2.HttpServlet(HTTP)las clases relacionadas se encuentran en el paquete 
+        javax.servlet.http. , Se procesan las peticiones utilizando los metodos 
+        get y post
+    
+    Se pueden configurar a traves de anotaciones o xml
+
+Metodo doGet <- Toda la informacion va poderse visibilzar  en la url
+
+Metodo doPost<- Toda la informacion se va ir de manera interna, background
+
+--Caracteristicas y practica de JSP(Java Server Pages)
+
+    Son componentes del lado del servidor para desarrollar paginas web que 
+    soportan contenido dinamico gracias a la inclusion del codigo java en 
+    en codigo html mediante el uso de tags JSP.
+
+--Arquitectura de las palicaciones web
+    
+    Etapas:
+    1.Requerimientos Funcionales: necesidades de lo que queremos hacer.
+    2.Diseno aplicacion: Se plasman las necesidades en un diseno, como 
+      van a ir articulados e interconectados para manejar el tema de la
+      interoperabilidad.Se utilizan herramientas de prototipado. 
+    3.Aplicacion terminada: Se plasman las ideas, desarrollo de nuestra
+      aplicacion en base a las decisiones de las etapas anteriores. 
+
+--Que es Spring Framework?
+    
+    *Framework open Source. Rod Johnson 2003.
+    *Creado como una alternativa para solucionar la complejidad de las tecnologias Java mas pesadas en ese momento, especialmente EJB.
+    *Spring no esta limitado al lado del servidor.
+    *Nacio como el core, actualmente es una empresa comercial con varios proyectos de diferente ambito. 
+
+    Caracteristica principal de spring es de manejar tema de inyeccion de
+    dependencias/inversion of control
+
+    Caracteristicas de Spring
+    *Desarrollo basado en POJOS(clases planas).
+    *Bajo acoplamiento -Dl. Interdependencia de los componentes. 
+    *Programacion declarativa. Anotaciones que permiten funcionalidades. 
+    *Reduccion Boileplatecode.  Generacion de los proyectos de manera versatil.
+    *Arquitectura en capas. Spring nace modular.Se compone de varios proyectos
+    que se relacionan e interlazan entre si, de una manera modular y practica. 
+
+--Caracteristicas de Spring Boot
+    Herramienta para optimizar los tiempos de desarrollo en la creacion y despliegue de proyectos.
+
+    *Aplicaciones Standalone:
+    Se empaqueta la app en un JAR con todas sus dependencias para poder ejecutarse sin necesidad de instalar un servidor web. funciona como una aplicacion standalone.
+
+    *Servidores Embebidos: 
+    Soporta a tomcat y jetty como servidores embebidos.
+
+    *Configuracion Simple:
+    Soporta cada uno de los modulos de Spring, como Spring MVC, Spring Data, Spring Resc, Spring Security y lo hace a traves de depencias, una sola por
+    cada tecnologia.Es construida y configurada por Spring Initializr.
+
+    *Caracteristicas de Produccion Listas.
+    Spring Boot viene con caracteristicas predefinidas para ambientes de produccion. Adicionalmente con Spring Profiles se pueden configurar caracteristicas de acuerdo al ambiente.
+
+--Crear, cargar y configurar una aplicacion en spring Boot.
+
+    *Como crear una aplicacion con Spring Boot?
+     >Requerimientos(JDK,MAVEN,IDE).
+     >Aplicacion a construir
+     >Tecnologia a utilizar.
+        .Spring Data JPA
+        .Spring Rest.
+    >Herramienta Spring Initializr
+
+--Crear la estrutura del proyecto
+    Configuracion de los paquetes de las capas de la applicacion.
+
+--Persistencia de Objetos.
+    Tecnologias utilizadas en Java para poder persistir informacion, tenemos las siguientes herramientas.
+
+
+    Qué es un ORM(Object Relational Mapping(Mapeo relacional de objetos))?
+    Un ORM es un modelo de programación que permite mapear las estructuras de una base de datos relacional (SQL Server, Oracle, MySQL, etc.), en adelante RDBMS (Relational Database Management System), sobre una estructura lógica de entidades con el objeto de simplificar y acelerar el desarrollo de nuestras aplicaciones.
+
+    JDBC:
+    Estandar para enviar solicitudes a la BD y obtener informacion,Conjunto de clases que gestionan la informacion de la BD de forma natural.(Utilizando sentencias DML y DDL).
+
+    JPA 
+    Es la propuesta estandar sobre como convertir los objetos de java en instrucciones para el manejador de la BD.
+
+    Herramientas que implementan JPA para ayudarnos a manejar la capa de
+    persistencia de nuestras aplicaciones: ORMs.
+    Existend diferentes ORMs como Hibernate, EclipseLink,ToplLink o Datanucleos.Pueden mapear un modulo relacional a un modelo de objetos, nos permite gestionar nuestros datos como si fueran objetos.
+
+
+    NOTA: Las ORMs nos permiten trabajar con BD relacionadas usando POO.
+    JPA es la propuesta estandar de java que deben implementar las ORMs para
+    intereactuar con la BD por medio de Objetos. Y todos estos ORMs utilizan JDBC para leer y escribir en la base de datos.
+
+--Ques es Spring Data JPA:
+    *Provee una manera facil de implementar la capa de acceso a datos utilizando las especificaciones de JPA.
+
+    *Spring Data JPA creara una implementacion de repositorios (una capa mas alta) y encapsulara todos los detalles de una implementacion de JPA.
+
+    *Soporte paginacion, ejecucion dinamica de queries. 
+
+--Optimizar POJOS con lombok 
+    los Pojos(Plain old java Objects)
+    Lombok es una libreria que nos permite eliminar codigo repetitivo.
+
+    Anotaciones:
+    @Data se generan los getter and setter
+
+--Mapear Tables de la BD
+    El proceso de mapear las tablas de las BD a clases en nuestra capa de modelo se conoce como ORM(Object Relational Mapping)
+
+--Anadir JPA Repository:
+    Los repositorios son la herramienta principal de spring data, el repositorio principal o base es Repository, de la cual se tienen interfaces centrales CrudRepository, PageAndSortingRepository.
+
+    Existen varios repositorios de acuerdo a la tecnologia a utilizar como JPArepository, MongoRepository que se basan en PageAndSortingRepository
+
+    Nos evitan crear clases abstratas con todas las operaciones CRUD relacionadas con la BD, y a partir de la misma crear una nueva clase para administrar las diferentes entidas.
+
+--Implementar las operaciones de Consulta con JPA Repository
+    Spring Data cuenta con soporte para realizar consultas personalizadas basado en los atributos de la clase base ques se generar de forma automatica en el tiempo de ejecucion(Query generation Strtegy). 
+
+    Tambien soporta otro tipo de consultas basadas en JPQL(Java Persistence Query Language) como @Query y @NamedQuery.
+
+--Implementar Servicio de negocio para las operaciones CRUD
+    
+    Despues de definir el repositorio, el siguiente paso es trabajar en las clases para exponer estas operaciones en la capa de negocio las cuales son llamadas servicios. 
+
+    Para indicar que la clase es un bean de la capa de negocio se utiliza la anotacion @Service.
+
+--Manejar la transaccionalidad de un servicio de negocio.
+
+    Las transacciones son un conjunto de operaciones que afectan la BD(updates o deletes, no se recomienda realizar consultas de solo lectura)
+
+    Transaccion es el conjunto de operaciones que se ejecutan en bloque, todas o ninguna. 
+
+    Las transacciones empiezan a terminan a nivel del servicio nunca a nivel de capas de datos. 
+
+    Para indicar que una clase o metodo sera transaccional se utiliza la anotacion @Transactional.
+
+    Aparecen dos conceptos nuevos: 
+        (commit), el cual comete todas las operaciones de una transaccion.
+        (rollback), deshace todas la operaciones.
+
+    ACID(Atomicity, Consistency, Isolation, Durability)
+
+--Como instalar y configurar Swagger?
+
+    Es la herramienta por defecto para documentar API's web, genera una forma interactiva de ejecutarlos.
+
+    Provee una manera facil de implementar clientes en variedad de lenguajes. 
+
+    Para configurarlo en spring se utiliza el proyecto Spring Fox con sus dependencias en el archivo pom.xml del proyecto. 
+
+
+--Caracteristicas de los servicios web y Spring rest.
+
+    Los Servicios web:
+    Son aplicaciones construidas para poder intercambiar informacion entre otras aplicaciones utilizando protocolos estandarizados- interoperabilidad.
+
+    Existen dos manera de contruir servicios web: SOAP(XML) y REST(JSON).
+
+
+    Spring Rest:
+    Es una manera de construir servicios web con spring utilizando la arquitectura REST y aprovechando la experiencia de Spring MVC
+
+    Anotacion @RestController
+    Se usa en la clase base, se utiliza para configurar los servicios web.
+    Se combina con el comportamiento de las anotaciones @Controller y @ResponseBody.
+
+    @RestController <- Indica que la clase va ser tratada como un servicio web.
+    @RequestMapping("/api/client") <- nombre del servicio web.
+
+--Documentacion de los servicio REST con Swagger
+
+
+
+--Como manejar la seguridad de una aplicacion web?
+
+    Mecanismos relacionados con la autenticacion y autorizacion como son:
+
+    *Filtro de Autenticacion.<- Verificar credenciales, la autorizacion, recursos a los cuales se van a poder acceder.
+    usuarios->roles->menus->operaciones.
+
+    No se pueden escribir una url sin haberse registrado.
+
+    *Control paginas de error. <- Si una pagina no existe se debe tener control de esto.Se configura en el archivo web.xml.
+    *Envio de peticiones.<- 
+
+OWASP estadar para codificar la seguridad de mi aplicacion. get y post.
+
+--Spring Security
+Es un framework de Spring que permite gestionar completamente la seguridad de nuestras aplicaciones Java. Permite.
+
+    *Gestionar seguridad en varios niveles.
+    *Configuracion de seguridad portable.
+    *Soporta muchos modelos de autenticacion(HTTP Basic, LDAP, OAuth, Http Digest entre otros.)
+
+--Realizar la configuracion de Docker Plugin
+
+    despliegue de aplicaciones en docker
+
+    Como se realiza la configuracion de docker plugin?
+    una vez terminada nuestra aplicacion vamos a proceder a dockerizarla:
+
+        *Tener instalado docker en nuestro equipo.
+        *Configurar el plugin de docker en nuestro pom.xml  
+
+--Como crear una imagen docker de la aplicacion?
+
+    Despues de configurar el plugin para construir una imagen de la aplicacion se realiza lo siguiente:
+
+    *Configurar el nombre del proyecto final en el pom.xml
+    *Crear una tarea de ejecucion en el IDE para ejecutar el plugin y proceder a ejecutarla.
+
+Una vez realizado se tendra creada la imagen de nuestro proyecto y se podra revisar con el comando docker images.
+
+para construir la imagen debemos crear un archivo application-pro.yaml con la configuracion de nuestra aplicacion en produccion,configurar el nombre del proyecto final en el archivo pom.xml y crear una tarea de ejecuicion en el IDE.
+
+--Subir la aplicacion a docker hub
+
+    Docker es un repositorio publico gratuito para almacenar imagenes docker.
+
+    *Logearse en Docker Hub desde la consola o terminal a traves del comando docker login.
+    *Ejecutar el comando docker push 
+        <image>:tag
+
+--Como ejecutar la aplicacion dockerizada?
+    Para ejecutar la aplicacion dockerizada se tiene que realizar lo siguiente:
+
+    *Generar un spring-profile para configurar un ambiente de produccion.
+    *Ejecutar la aplicacion con el comando docker run enviando las configuraciones.
+
+
