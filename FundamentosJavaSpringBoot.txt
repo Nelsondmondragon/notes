@@ -1,0 +1,146 @@
+--Que aprenderas?
+
+	-Aprender a contruir una aplicacion en spring boot.
+	-Enterder los conceptos de inyeccion de dependencias.
+	-Entender el funcionamiento de spring Boot a nivel general.
+	-Que son los beans o dependencias.
+	-El funcionamiento del patron de inyeccion de dependencias.
+	-Como crear servicio REST.
+	-Implementar tu arquitectura bajo las anotaciones del proyecto.
+
+	Que es spring boot?
+	-Un proyecto basado en Spring.
+	-Su objetivo principal es correr la aplicacion.
+	-Integrar librerias de terceros muy facilmente.
+	-Configuraciones minimas a nivel de properties.
+	-Tienen como caracteristicas principales servicios web embebidos.
+
+--Caracteristicas principales de Spring boot.
+	-Independiente.
+	-Incrustado Tomcat. jetty o Undertow.
+	-Proporcion de dependencias.
+	-Sin generacion XML.
+	-Metricas de salud del aplicativo.(Validar el estado de un servicio, las dependencias).
+
+--Que es una dependencia?
+	-Son objetos definidos como una funcionalidad. 
+	-Sin esta funcionalidad los otros objetos no podran trabajar, dependen de ellas. 
+	-Necesitamos objetos que tengan otras dependencias que ayuden a cumplir un objetivo.
+	-Pequena caracteristica de un objeto especifico. 
+
+	Las dependencias interactuan entre si para poder cumplir un objetivo.
+ 
+ --Inversion de control y el patron de inyeccion de dependencias. 
+
+ 	Que es inversion de control?
+ 	-Principio que transfiere el control de objetos de un programa a un contenedor o framework.
+
+ 	*Un contenedor puede ser un usuario o una aplicacion
+ 	*Cuando le invertimos el control a un framework, se va encargar de instanciar, inicializar todos lo beans, todas las dependencias a nivel de librerias. 
+
+ 	-Ventajas de IoC
+ 	 *Desacoplamiento cuando los objetos cuentan con sus dependencias.
+ 	 *Se oculta la implementacion de las dependencias, beneficio de segregacion de interfaces.
+ 	 *Facilita el testing por componentes o mocks de dependencias.
+ 	 *Mayor modularidad de un programa.
+ 	 *Alta cohesion: la entidad ejecute las acciones sin involucrar otra clase, relaiza unicamente tareas para la cual fue disenada.
+ 	 *Bajo acomplamiento: Independencia entre los componentes.
+
+ 	-IoC en el contexto de spring boot.
+ 	Los objetos que son administrados por el contenedor spring IoC se denominan beans. Un bean es una dependencia que es instanciada e inicializada por spring. 
+
+ 	Un bean es un objeto que es instanciado, ensamblado y administrado por un contenedor spring IoC
+
+ 	-Que es inyeccion de dependencias?
+
+ 	*Es el patron que utiliza IoC para utilizar las dependencias que hemos inicializado con spring.
+ 	*DI es el proceso con el que los objetos definen sus dependencias. 
+ 	*Codigo mas limpio y desacoplamiento mas efectivo cuando cada objeto cuenta con su dependencia.
+
+
+ 	-Inyeccion de dependencias a nivel de spring boot.
+
+ 	*Implementacion del principio de inversion de control.
+ 	*Definicion de los otros objetos con los que trabajan.
+ 	*Clases mas faciles de probar, en particular cuando son interfaces.
+
+-- AUTOCONFIGURACION Y RUNTIME:
+	
+	Configura automaticamente tus aplicaciones basadas en dependencias JAR que tu agregaste.
+
+	La Autoconfiguracion no es invasiva, siempre que queremos podemos configurar nuestros propios beans.
+
+	-Ejemplos 
+
+	Al utilizar la dependencia de la BD H2 en nuestro proyecto spring boot configura automaticamente la dependencia por ti.Pero si permite agregar configuraciones manuales.
+
+
+--ANOTACIONES MAS COMUNES EN SPRING BOOT:
+	
+	@Component: Una anotacion muy generica,componente o modulo que consideramos muy genericos 
+
+	@Controlle (Presentacion) : Se encarga de representar la vista o el diseno, todo lo que viene de la interfaz grafica, metodos Http, respuestas del servidor,etc.
+
+	@Service (Service): Sirve para toda la logica de negocio adicional de nuestro sistema.
+
+	@Repository(Persistence): Se encarga de toda la persistencia.
+
+
+El inicializador spring boot, nos provee un conjunto de herramientas que nos permite correr nuestra aplicacion de manera correcta.
+
+--INYECCION DE DEPENDENCIA "COMPONENT":
+
+	@Qualifier <- Decidimos que clase queremos implementar.
+	
+	
+Cohesion <- https://www.disrupciontecnologica.com/acoplamiento-y-cohesion/#%C2%BFQue_es_cohesion
+
+ISP <- https://desarrolloweb.com/articulos/principio-de-segregacion-interfaces-dotnet.html
+
+--EJEMPLO DE CREACION DE DEPENDENCIA PROPIA
+
+	reto crear tus propias dependencias.
+
+--CAMBIO DE PUERO Y PATH
+
+	@RequestMapping <- Sirve para aceptar todas las solictudes dentro del metodo a nivel http
+
+	@ResponseBody <-Responde un cuerpo del servicio.
+	
+
+--USO DE PROPERTIES Y VALORES
+--USO DE PROPERTIES CON EJEMPLO DE GENERACION DE POJO.
+--QUE SON LOS LOGS Y COMO UTILIZARLOS?
+	
+	Son una herramienta o utilidad que nos permite debuggear la informacion, es decir cuando queremos saber por donde esta pasado la informacion, por cual metodo y por cual clase y por el nivel de depuracion que queremos mostrarlos.
+
+	Utilizaremos apache commons:
+
+	Niveles de logs
+
+	1. Error.<- Nos permite mostrar cierta informacion cuando ocurre un error.
+	2. Info.<- Muestra informacion muy general.
+	3. Debug.<- Para depurar por donde estamos pasando a nivel de codigo fuente.
+	4. Otros.
+
+	Estas herrmaientas se utilizan muchos en las arquicteruas de microservicios.
+
+	Estas propiedades se pueden cambiar en el archivo properties
+
+--MODELADO DE ENTIDADES CON JPA
+
+	Molemiento de entidades.
+
+	-Que es JPA(Java Persistence API)?
+
+	Estandar de la industria para modelar BD en java.
+
+	Especificacion de java para acceder, conservar y administrar datos entre objetos o clases y una base de datos relacional.
+
+--CONFIGURACION DE DATASOURCE CON PROPERTIES Y CLASES.
+
+	Configuracion en el archivo properties o en la configuracion general de la aplicacion
+
+--REGISTRO EN BD CON JPAREPOSITORY
+	
+	JPAREPOSITORY <-Es una implementaciona nivel de interface de JPA
