@@ -1,0 +1,75 @@
+git checkout <- Cambiar de rama.
+git branch <- me muestra todas las ramas.
+git show-branch <- Nos muestra las ramas que existen.
+git show-branch --all <-Nos muestra las ramas con informacion extra.
+gitk <- Me muestra de manera visual la historia mediante un software.
+git pull origin master <-De GitHub a git.
+git push origni master <- De git a GitHub.
+git branch nombreRama <- Crear rama.
+git clone <- Nos permite clonar repositorios de gitHub a git.
+git diff <- cambios de staging vs lo que tenemos en el disco duro.
+git merge nombreRama <- fusiona la rama main con nombreRama.
+
+DevOps <- Administrador del entorno de desarrollo, encargado del merge
+          a la branch Master.  
+
+Branch Master <- branch en servidor de producccion.
+
+Branch staging develop(Rama antes de master) <- branch en servidor de prueba.
+
+Branch feature <- Rama de desarrollo
+
+pullRequest (caracteristica de GitHub)<- estado intermedio antes de enviar el merge, permite a otros
+                mienbros del equipo revisar tus cambios, se decide la aprobacion
+                y se realiza el merge automatico
+
+Nota: Para agregar la caracteristica se envia la branch Feature al pullRequest
+      de la branch staging, si se aprueba se hace el merge automatico a la branch
+      del servidor de prueba, si todo funciona, se hace el mismo procedimiento
+      con la branch Master.
+
+
+gitHub Pages <- servidor online
+
+rebase <- Agarrar una rama entera y pegarla a la rama maestra
+
+git Stash <- forma util de tener en temporal tus cambios, poder movernos
+             entre ramas y luego recuperarlos. Es típico cuando estamos 
+             cambios que no merecen una rama o no merecen un rebase si no 
+             simplemente estamos probando algo y luego quieres volver 
+             rápidamente a tu versión anterior la cual es la correcta.
+
+git Stash branch nombreRama <- crea una rama con tus cambios temporales.
+
+git clean <- limpia tu proyecto de archivos no deseados.
+
+git clean --dry-run <- simula lo que se va borrar
+
+git clena -f <- borra los archivos
+
+Git cherry-pick <- Se utiliza para traer commit viejos de otras ramas
+                    a mi rama master.                                    
+
+git commit --amend <- Guarda los cambios en el commit anterior,
+                      se utiliza cuando nos faltaron cambios en el 
+                      commit. (Importante agregar los cambios con add)
+
+git reset --soft HashDelHEAD <-  Te recuperará todos los cambios que tengas diferentes 
+                                 al commit eff544f, los agregará al staging area y moverá
+                                 el head al commit eff544f.
+
+
+git reset --hard HashDelHEAD <- Perderá todo lo que se encuentra en staging y en el Working
+                                directory y se moverá el head al commit eff544f
+
+git reflog <- Guarda todos los cambios. 
+
+git grep–> buscar en los archivos.
+            -n <- en que lineas.
+            -c <- cuantas veces.
+
+
+git log -S "Palabra a buscar" --> buscar en los commits.
+
+
+            
