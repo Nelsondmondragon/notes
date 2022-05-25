@@ -29,7 +29,14 @@ Podemos definir funciones con respecto a si mismas(Recursividad)
 Podemos definir funciones que tomen otra funciones como parametros.
 
 # 2. Funciones como ciudadanos de primera clase.
+Ya son reconocidos por el lenguaje.
+Es algo que podemos definir y utilizar.
 Es algo dentro del leguaje que es usable y operable.
+
+- Se pueden declarar variables de tipo funcion.
+- Se pueden tomar como parametros de otras funciones.
+
+capacidad que confiere Java 8 en adelante para tratar las funciones como Tipos de datos, que pueden declararse, recibirse cómo parámetros o enviarse (retornarse) cómo resultados.
 
 # 3. Funciones puras:
 - Es una funcion que genera el mismo resultado para el mismo parametro.
@@ -47,6 +54,10 @@ Es algo dentro del leguaje que es usable y operable.
 
 NOTA: No podemos invocar una funcion impura desde una funcion pura.
 
+# 3.1 Funciones Impuras
+Funciones que no son puras.
+- Una funcion pura no puede invocar una funcion impura.
+- Una funcion impura puede llamar un funcion impura.
 # 4. Entendiendo los efectos secundarios.
 Un efecto secundario es todo cambio observable desde fuera del sistema, ej: funcion que cambia el color de algo.
 
