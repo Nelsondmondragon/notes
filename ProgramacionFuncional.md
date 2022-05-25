@@ -58,8 +58,14 @@ NOTA: No podemos invocar una funcion impura desde una funcion pura.
 Funciones que no son puras.
 - Una funcion pura no puede invocar una funcion impura.
 - Una funcion impura puede llamar un funcion impura.
+
 # 4. Entendiendo los efectos secundarios.
 Un efecto secundario es todo cambio observable desde fuera del sistema, ej: funcion que cambia el color de algo.
+
+- Leer/Crear/modificar/borrarArchivos.
+- Leer/escribir en una base de datos.
+- Enviar/recibir una llamada de red.
+- Alterar un objeto/variable usada por otra funciones.
 
 ### Por que evitar los efectos secundarios?
 - Nos ayuda a tener una mejor estructura de nuestro codigo.
@@ -68,13 +74,16 @@ Un efecto secundario es todo cambio observable desde fuera del sistema, ej: func
 
 No podemos tener codigo sin efectos secundarios, pero podemos reducirlos.
 
+Tener la mayor cantidad de funciones puras en nuestro sistema, para aumentar la testeabilidad de nuestro sistema.
+
 # 5. Funciones de orden mayor
+Es una funcion que cumpla con al menos una de las siguientes caracteristicas. puede tener las dos.
 - Toma una funcion como parametro
 - Retorna una funcion como resultado.
 
 ### Ventajas:
 - Pasar comportamientos.
-- Compartir un medio de comunicacion.
+- Compartir un medio de comunicacion(callbacks).
 - Compartir logica/reglas.
 
 # 6. Funciones lambdas.
@@ -91,6 +100,19 @@ No podemos tener codigo sin efectos secundarios, pero podemos reducirlos.
 - Es un compartamiento de uso unico.
 - Una regla que solo se requiere en un lugar.
 - Es una funcion extremadamente simple.
+
+Una lambda sigue siendo una funcion.
+
+# 6.1 Inmutabilidad de los datos.
+### Ventajas 
+- Una vez creado no se puede alterar.
+- Facilita crear funciones puras.
+- Facilita usar threads/concurrencia.
+
+### Desventajas
+- Nueva instancia por cada set de modificaciones.
+- Requiere especial atencion al disenno.
+- Objetos mutables fuera de nuestro alcance.
 
 # 7. Revisando el paquete java.util.function: Function
 Ahora las funciones tambien son tipos
